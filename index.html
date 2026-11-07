@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#21163e">
+  <meta name="description" content="Let's do Math! — Grade 9 Mathematics learning, practice, notes, and games.">
+  <title>Let's do Math! | Grade 9 Mathematics</title>
+  <link rel="stylesheet" href="style.css?v=4">
+  <script src="script.js?v=4" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" data-page="home" aria-label="Let's do Math home"><span class="brand-mark">∑</span><span>Let's do <em>Math!</em></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-page="home">Home</button>
+        <button class="nav-link" data-page="learn">Learn</button>
+        <button class="nav-link" data-page="games">Games</button>
+      </nav>
+    </header>
+
+    <main id="app-main">
+      <section id="home" class="page active">
+        <div class="hero-card">
+          <div class="hero-copy">
+            <p class="eyebrow">GRADE 9 MATHEMATICS</p>
+            <h1>Learn math.<br><span>Practice. Have fun.</span></h1>
+            <p>Build your skills one step at a time with lessons, practice activities, and friendly math games.</p>
+            <button class="primary-btn" data-page="learn">Start learning <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="symbol symbol-a">π</span><span class="symbol symbol-b">√x</span><span class="symbol symbol-c">△</span><span class="symbol symbol-d">∑</span><div class="math-card">x² + y² = z²</div></div>
+        </div>
+        <div class="welcome-row"><div><p class="eyebrow">YOUR LEARNING SPACE</p><h2>Ready to explore?</h2><p class="muted">Choose a subject or challenge yourself with a game.</p></div><div class="streak-pill">✦ Learn at your own pace</div></div>
+        <div class="quick-grid">
+          <button class="quick-card" data-page="learn"><span class="quick-icon purple-icon">▤</span><strong>Study lessons</strong><small>Four Grade 9 math topics</small></button>
+          <button class="quick-card" data-page="games"><span class="quick-icon teal-icon">♟</span><strong>Play math games</strong><small>Challenge a friend</small></button>
+        </div>
+      </section>
+
+      <section id="learn" class="page">
+        <div class="section-heading"><p class="eyebrow">CHOOSE A TOPIC</p><h1>What do you want to learn?</h1><p class="muted">Select a topic to open its learning menu.</p></div>
+        <div class="topic-grid">
+          <button class="topic-card" data-topic="Algebra"><span class="topic-icon algebra-icon">x²</span><span class="topic-copy"><strong>Algebra</strong><small>Expressions, equations, and functions</small></span><span class="card-arrow">→</span></button>
+          <button class="topic-card" data-topic="Geometry"><span class="topic-icon geometry-icon">△</span><span class="topic-copy"><strong>Geometry</strong><small>Shapes, angles, and measurement</small></span><span class="card-arrow">→</span></button>
+          <button class="topic-card" data-topic="Trigonometry"><span class="topic-icon trig-icon">∠</span><span class="topic-copy"><strong>Trigonometry</strong><small>Right triangles and ratios</small></span><span class="card-arrow">→</span></button>
+          <button class="topic-card" data-topic="Statistics"><span class="topic-icon stats-icon">▥</span><span class="topic-copy"><strong>Statistics</strong><small>Data, measures, and probability</small></span><span class="card-arrow">→</span></button>
+        </div>
+      </section>
+
+      <section id="topic-menu" class="page">
+        <button class="back-btn" data-back="learn">← Back to topics</button>
+        <div class="section-heading"><p class="eyebrow" id="topic-eyebrow">YOUR TOPIC</p><h1 id="topic-menu-title">Algebra</h1><p class="muted">Choose how you want to learn.</p></div>
+        <div class="mode-grid">
+          <button class="mode-card" data-mode="Routine"><span class="mode-number">01</span><span class="mode-emoji">✎</span><strong>Routine</strong><small>Practice basic skills and solve familiar problems.</small><span class="mode-link">Start practice →</span></button>
+          <button class="mode-card" data-mode="Non-routine"><span class="mode-number">02</span><span class="mode-emoji">✦</span><strong>Non-routine</strong><small>Use reasoning to solve real-life and challenging problems.</small><span class="mode-link">Take the challenge →</span></button>
+          <button class="mode-card notes-mode" data-mode="Notes"><span class="mode-number">03</span><span class="mode-emoji">▤</span><strong>Notes</strong><small>Review key concepts, formulas, and worked examples.</small><span class="mode-link">Open notes →</span></button>
+        </div>
+      </section>
+
+      <section id="practice-menu" class="page">
+        <button class="back-btn" data-back="topic-menu">← Back to <span id="practice-menu-topic">topic menu</span></button>
+        <div class="section-heading">
+          <p class="eyebrow" id="practice-menu-eyebrow">GRADE 9 • ALGEBRA • ROUTINE</p>
+          <h1 id="practice-menu-title">Choose a practice set</h1>
+          <p class="muted" id="practice-menu-description">Choose an activity to begin practicing.</p>
+        </div>
+        <div id="practice-menu-grid" class="practice-menu-grid"></div>
+      </section>
+
+      <section id="practice" class="page">
+        <button class="back-btn" data-back="practice-menu">← Back to practice menu</button>
+        <div class="practice-top"><div><p class="eyebrow" id="practice-label">ROUTINE PRACTICE</p><h1 id="practice-title">Algebra</h1></div><div class="progress-chip" id="question-count">Question 1 of 5</div></div>
+        <div class="practice-panel">
+          <div class="question-meta"><span id="question-topic">ALGEBRA</span><span id="question-mode">ROUTINE</span></div>
+          <div class="progress-track"><span id="progress-fill"></span></div>
+          <h2 id="question-text">Loading question...</h2>
+          <div id="answer-list" class="answer-list"></div>
+          <p id="feedback" class="feedback" aria-live="polite">Choose the best answer.</p>
+          <div class="practice-actions"><button id="next-question" class="primary-btn" disabled>Next question →</button><button id="restart-practice" class="subtle-btn">Restart</button></div>
+        </div>
+        <p class="muted small-note">Take your time. Read each question carefully before choosing an answer.</p>
+      </section>
+
+      <section id="notes" class="page">
+        <button class="back-btn" data-back="topic-menu">← Back to <span id="notes-back-topic">topic menu</span></button>
+        <div class="section-heading"><p class="eyebrow">GRADE 9 STUDY NOTES</p><h1 id="notes-title">Algebra Notes</h1><p class="muted">A topic guide with important ideas, formulas, and examples.</p></div>
+        <div id="notes-content" class="notes-content"></div>
+      </section>
+
+      <section id="games" class="page">
+        <div class="section-heading"><p class="eyebrow">MATH GAME CORNER</p><h1>Choose a game</h1><p class="muted">Play solo or challenge a friend on one device.</p></div>
+        <div class="game-grid">
+          <button class="game-card" data-game="quicktap"><span class="game-icon teal-icon">⚡</span><strong>Quick-Tap Duel</strong><small>React quickly when the signal appears. Two players, one device.</small><span class="mode-link">Play 1v1 →</span></button>
+          <button class="game-card" data-game="tictactoe"><span class="game-icon purple-icon">▦</span><strong>Math Four-in-a-Row</strong><small>Answer a math question, then claim a square on the 5 × 5 board.</small><span class="mode-link">Play 1v1 →</span></button>
+          <button class="game-card" data-game="tug"><span class="game-icon orange-icon">↔</span><strong>Math Tug of War</strong><small>Answer correctly to pull the marker toward your side.</small><span class="mode-link">Play 1v1 →</span></button>
+          <div class="game-card game-coming"><span class="game-icon purple-icon">▣</span><strong>Sudoku Mini-Game</strong><small>Logical number puzzles are planned for a future update.</small><span class="coming-label">Coming soon</span></div>
+          <div class="game-card game-coming"><span class="game-icon teal-icon">♟</span><strong>Chess 1v1</strong><small>A two-player chess board is planned for a future update.</small><span class="coming-label">Coming soon</span></div>
+        </div>
+      </section>
+
+      <section id="game-screen" class="page">
+        <button class="back-btn" data-back="games">← Back to games</button>
+        <div id="game-content"></div>
+      </section>
+    </main>
+    <footer><span>Let's do Math!</span><span>Grade 9 Mathematics · Learn • Practice • Play</span></footer>
+  </div>
+</body>
+</html>
